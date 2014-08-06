@@ -1,0 +1,26 @@
+{
+  "name": "Honeydew",
+  "version": "0.0.0",
+  "description": "A personal budgeting tool",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "./node_modules/lab/bin/lab -c",
+    "build-js": "browserify browser/main.js | uglifyjs -mc > public/js/bundle.js",
+    "watch-js": "watchify browser/main.js -o public/js/bundle.js -dv"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/martamccasland/honeydew.git"
+  },
+  "author": "Marta McCasland",
+  "license": "MIT",
+  "dependencies": {
+    "hapi": "^6.2.1"
+    "joi": "^4.6.1",
+    "handlebars": "^2.0.0-alpha.4",
+  },
+  "devDependencies": {
+    "lab": "^3.2.1"
+  }
+}
